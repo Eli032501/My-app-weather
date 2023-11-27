@@ -1,3 +1,34 @@
 body {
   background-color: rgb(96, 155, 218);
+  font-size: 14px;
+}
+main {
+  background-color: white;
+  width: 720px;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.search-bar {
+  width: 76%;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.submit-button {
+  width: 20%;
+  border-radius: 6px;
+}
+
+.weather-section {
+  margin-top: 30px;
+}
+.current-temp {
+  width: 60%;
 }
