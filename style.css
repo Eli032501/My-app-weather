@@ -5,8 +5,8 @@ body {
 }
 main {
   background-color: white;
-  width: 700px;
-  margin: 50px auto;
+  width: 660px;
+  margin: 40px auto;
   border-radius: 10px;
   padding: 40px;
 }
@@ -14,7 +14,7 @@ main {
 .search-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .search-bar {
   width: 76%;
@@ -30,7 +30,7 @@ main {
 /* -----------------section weather display */
 
 .weather-section {
-  margin-top: 30px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,25 +40,26 @@ main {
 }
 .div-current-temp {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding-right: 15%;
 }
 
 .current-temp {
-  font-size: 4.8em;
-  font-weight: 600;
+  font-size: 4em;
+  font-weight: 700;
 }
 
 .main-icon {
-  font-size: 160px;
+  font-size: 150px;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
 }
 
 h1 {
   font-size: 3.4em;
+  margin: 0px;
+  padding-top: 16px;
 }
-.div-city-date h3 {
+.div-city-date h2 {
   font-size: 1.4em;
   font-weight: 500;
   margin-bottom: 4px;
@@ -78,7 +79,7 @@ h1 {
 /* -------------------divison week weather */
 
 .week-weather-div {
-  width: 30%;
+  width: 34%;
 }
 .week-weather-div ul {
   list-style: none;
@@ -87,4 +88,35 @@ h1 {
   display: flex;
   justify-content: left;
   align-items: center;
+  border-radius: 10px;
+  background-color: rgba(162, 162, 162, 0.263);
+  margin: 5px 0;
+  padding: 10px 16px;
+}
+
+.week-weather-div ul li:hover {
+  background-color: rgb(144, 75, 235);
+}
+.week-weather-div ul li h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.week-icon {
+  font-size: 30px;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
+}
+.span-weekdays {
+  margin-left: 18px;
+}
+.span-weekdays p {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 0;
+}
+
+.span-weekdays .value-min {
+  color: rgb(88, 21, 150);
+  font-weight: 400;
+  padding-left: 12px;
 }
