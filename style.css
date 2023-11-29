@@ -50,7 +50,7 @@ main {
   font-weight: 600;
 }
 
-.material-symbols-outlined {
+.main-icon {
   font-size: 160px;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
 }
@@ -79,4 +79,12 @@ h1 {
 
 .week-weather-div {
   width: 30%;
+}
+.week-weather-div ul {
+  list-style: none;
+}
+.week-weather-div ul li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
