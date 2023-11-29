@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>My weather app</title>
   </head>
@@ -15,13 +25,17 @@
       <hr />
       <section class="weather-section">
         <div class="day-weather-div">
-          <div class="current-temp"><span> ⛅ </span> <span> 23ºC </span></div>
-
-          <h1>Lisbon</h1>
-          <h3>23 de outubro 2023</h3>
-          <span>clouds</span>
-          <span>humidity 22</span>
-          <span>wind 12km</span>
+          <div class="div-current-temp">
+            <span class="material-symbols-outlined"> partly_cloudy_day </span>
+            <span class="current-temp"> 23ºC </span>
+          </div>
+          <div class="div-city-date">
+            <h1>Lisbon</h1>
+            <h3>23 de outubro 2023</h3>
+            <span>clouds</span>
+            <span>humidity 22</span>
+            <span>wind 12km</span>
+          </div>
         </div>
         <div class="week-weather-div">
           <ul>
