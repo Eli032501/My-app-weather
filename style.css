@@ -8,9 +8,9 @@ main {
   width: 700px;
   margin: 50px auto;
   border-radius: 10px;
-  padding: 30px;
+  padding: 40px;
 }
-
+/* -------------------section search input */
 .search-section {
   display: flex;
   justify-content: space-between;
@@ -27,42 +27,56 @@ main {
   border-radius: 6px;
 }
 
+/* -----------------section weather display */
+
 .weather-section {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .day-weather-div {
   width: 60%;
 }
 .div-current-temp {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  padding-right: 15%;
 }
 
 .current-temp {
-  font-size: 5em;
-  font-weight: 700;
+  font-size: 4.8em;
+  font-weight: 600;
 }
 
 .material-symbols-outlined {
-  font-size: 9em;
-  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  font-size: 160px;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
 }
-.div-city-date {
-  padding: 0 10%;
-}
+
 h1 {
   font-size: 3.4em;
 }
 .div-city-date h3 {
-  font-size: 1.6em;
-  font-weight: 400;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-family: "Hind Siliguri", sans-serif;
 }
-/* divison week weather */
+
+.div-city-date span {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 16px;
+  padding-right: 6px;
+}
+.value-hum-wind {
+  color: rgb(88, 21, 150);
+  font-weight: 400;
+  padding-left: 4px;
+}
+/* -------------------divison week weather */
+
 .week-weather-div {
   width: 30%;
 }
-/*  font-family: 'Hind Siliguri', sans-serif;
- */
