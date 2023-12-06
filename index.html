@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,24 +19,29 @@
   <body>
     <main>
       <section class="search-section">
-        <input type="text" placeholder="Enter a place..." class="search-bar" />
+        <input type="text" placeholder=" Enter a place..." class="search-bar" />
         <input type="submit" class="submit-button" />
       </section>
       <hr />
       <section class="weather-section">
         <div class="day-weather-div">
           <div class="div-current-temp">
-            <span class="material-symbols-outlined main-icon">
+            <div class="current-temp">23</div>
+            <div class="current-temp-unit">ºC</div>
+            <div class="material-symbols-outlined main-icon">
               partly_cloudy_day
-            </span>
-            <span class="current-temp"> 23ºC </span>
+            </div>
           </div>
           <div class="div-city-date">
             <h1>Lisbon</h1>
-            <h2>monday, 12 november 2023 | 12:10</h2>
+            <p>monday, 12 november 2023 | 12:10</p>
             <span class="value-hum-wind">Partly Cloudy</span>
-            <span>Humidity: <span class="value-hum-wind">55%</span></span>
-            <span>Wind: <span class="value-hum-wind">12km/h</span></span>
+            <span class="value-paramenter"
+              >Humidity: <span class="value-hum-wind">55%</span></span
+            >
+            <span class="value-paramenter"
+              >Wind: <span class="value-hum-wind">12km/h</span></span
+            >
           </div>
         </div>
         <div class="week-weather-div">

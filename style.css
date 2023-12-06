@@ -1,80 +1,102 @@
 body {
-  background-color: rgb(96, 155, 218);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
 main {
   background-color: white;
-  width: 660px;
-  margin: 40px auto;
+  width: 620px;
+  margin: 30px auto 0px;
   border-radius: 10px;
-  padding: 40px;
+  padding: 30px;
 }
 /* -------------------section search input */
 .search-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 .search-bar {
   width: 76%;
   height: 30px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .submit-button {
   width: 20%;
-  border-radius: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  background-color: rgb(135, 88, 176);
+  border: 2px solid rgb(192, 170, 213);
+  transition: all 150ms;
+}
+.submit-button:hover {
+  color: rgb(121, 79, 159);
+  background-color: #fff;
+  border: 2px solid rgb(121, 79, 159);
 }
 
 /* -----------------section weather display */
 
 .weather-section {
-  margin-top: 12px;
+  margin: 22px 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .day-weather-div {
-  width: 60%;
+  width: 64%;
+  margin-bottom: 15px;
 }
 .div-current-temp {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .current-temp {
   font-size: 4em;
   font-weight: 700;
 }
+.current-temp-unit {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
 
 .main-icon {
-  font-size: 150px;
+  font-size: 120px;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 h1 {
   font-size: 3.4em;
   margin: 0px;
-  padding-top: 16px;
+  padding-top: 10px;
+  margin-bottom: 30px;
 }
-.div-city-date h2 {
-  font-size: 1.4em;
-  font-weight: 500;
-  margin-bottom: 4px;
+.div-city-date p {
+  color: #474747;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0px;
   font-family: "Hind Siliguri", sans-serif;
 }
 
-.div-city-date span {
+.value-paramenter {
+  color: #474747;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 16px;
-  padding-right: 6px;
 }
 .value-hum-wind {
-  color: rgb(88, 21, 150);
+  color: rgb(90, 19, 156);
   font-weight: 400;
-  padding-left: 4px;
+  padding-right: 6px;
 }
 /* -------------------divison week weather */
 
@@ -83,20 +105,17 @@ h1 {
 }
 .week-weather-div ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .week-weather-div ul li {
+  margin-left: 20px;
   display: flex;
   justify-content: left;
   align-items: center;
-  border-radius: 10px;
-  background-color: rgba(162, 162, 162, 0.263);
-  margin: 5px 0;
-  padding: 10px 16px;
+  padding: 12px 16px;
 }
 
-.week-weather-div ul li:hover {
-  background-color: rgb(144, 75, 235);
-}
 .week-weather-div ul li h3 {
   font-size: 1.2em;
   font-weight: 600;
@@ -104,6 +123,7 @@ h1 {
   padding-bottom: 5px;
 }
 .week-icon {
+  color: rgb(88, 21, 150);
   font-size: 30px;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 1, "opsz" 20;
 }
@@ -119,4 +139,15 @@ h1 {
   color: rgb(88, 21, 150);
   font-weight: 400;
   padding-left: 12px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 400;
+  color: #474747;
+}
+
+footer a {
+  color: rgb(135, 88, 176);
 }
