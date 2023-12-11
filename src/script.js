@@ -7,7 +7,12 @@ function updateDataWeather(response) {
   placeDisplay.innerHTML =
     response.data.city.charAt(0).toUpperCase() + response.data.city.slice(1);
 
+  // icon condition
+
   // date - week day, day, month, year, hours
+  let date = new Date(response.data.time * 1000);
+  let sentenceDayHour = document.querySelector("#date_hours");
+  sentenceDayHour.innerHTML = formatDate(date);
 
   // extra values - sky, humidity, wind
   let skyElement = document.querySelector("#sky");
@@ -18,6 +23,49 @@ function updateDataWeather(response) {
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
+  console.log(response.data);
+}
+
+function formatDate(date) {
+  let currentWeekDay = date.getDay();
+  let currentDay = date.getDate();
+  let currentMonth = date.getMonth();
+  let currentYear = date.getFullYear();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let weekDay = week[currentWeekDay];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let thisMonth = months[currentMonth];
+
+  return `${weekDay}, ${currentDay} ${thisMonth.toLowerCase()} ${currentYear} | ${hour}:${minutes}`;
 }
 
 function searchPlace(place) {
