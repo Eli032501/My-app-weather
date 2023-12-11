@@ -58,7 +58,7 @@ form {
 }
 
 .current-temp {
-  font-size: 3.6em;
+  font-size: 4em;
   font-weight: 700;
 }
 .current-temp-unit {
@@ -69,8 +69,8 @@ form {
 }
 
 .main-icon {
-  width: 130px;
-  margin-left: 8px;
+  width: 120px;
+  margin-left: 10px;
 }
 
 h1 {

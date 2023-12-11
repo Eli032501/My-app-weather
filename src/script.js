@@ -8,7 +8,8 @@ function updateDataWeather(response) {
     response.data.city.charAt(0).toUpperCase() + response.data.city.slice(1);
 
   // icon condition
-
+  let mainIcon = document.querySelector("#icon_sky");
+  mainIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="main-icon"/>`;
   // date - week day, day, month, year, hours
   let date = new Date(response.data.time * 1000);
   let sentenceDayHour = document.querySelector("#date_hours");
