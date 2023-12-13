@@ -43,7 +43,7 @@ form {
 /* -----------------section weather display */
 
 .weather-section {
-  margin: 14px 22px 0px;
+  margin: 14px 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +100,7 @@ h1 {
 /* -------------------divison week weather */
 
 .week-weather-div {
-  width: 25%;
+  width: 30%;
 }
 .week-weather-div ul {
   list-style: none;
@@ -109,7 +109,7 @@ h1 {
 }
 .forecast-week-day {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   padding: 6px 0px;
 }
@@ -124,6 +124,9 @@ h1 {
   width: 60px;
 }
 
+.span-weekdays {
+  margin-left: 12px;
+}
 .span-weekdays p {
   font-family: "Hind Siliguri", sans-serif;
   margin: 0;

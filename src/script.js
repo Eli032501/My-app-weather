@@ -82,6 +82,21 @@ function displayPlaceSubmit(event) {
   searchPlace(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursaday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[date.getDay()];
+}
+
 function getForecast(place) {
   let apiKey = "ba3t92f6af6b8204143cbo1c5a032ba3";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${place}&key=${apiKey}&units=metric`;
@@ -90,7 +105,6 @@ function getForecast(place) {
 
 function displayForecast(response) {
   console.log(response.data);
-  //let days = ["Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday"];
   let forecastHTML = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -101,7 +115,7 @@ function displayForecast(response) {
         ` <li class="forecast-week-day">
       <img src="${day.condition.icon_url}" class="week-icon"/>
       <span class="span-weekdays">
-      <h3>Tuesday</h3>
+      <h3>${formatDay(day.time)}</h3>
       <p>${Math.round(day.temperature.maximum)}ºc 
       <span class="value-min">
       ${Math.round(day.temperature.minimum)}ºC
