@@ -98,9 +98,9 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       ` <li class="forecast-week-day">
-      <span class="material-symbols-outlined week-icon"> sunny </span>
+      <img src="${day.condition.icon_url}" class="week-icon"/>
       <span class="span-weekdays">
-      <h3>Tue</h3>
+      <h3>Tuesday</h3>
       <p>${Math.round(day.temperature.maximum)}ºc 
       <span class="value-min">
       ${Math.round(day.temperature.minimum)}ºC
