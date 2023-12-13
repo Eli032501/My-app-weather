@@ -24,7 +24,8 @@ function updateDataWeather(response) {
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
-  console.log(response.data);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -81,7 +82,14 @@ function displayPlaceSubmit(event) {
   searchPlace(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(place) {
+  let apiKey = "ba3t92f6af6b8204143cbo1c5a032ba3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${place}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday"];
   let forecastHTML = "";
 
@@ -106,4 +114,3 @@ let searchForm = document.querySelector("#form_search");
 searchForm.addEventListener("submit", displayPlaceSubmit);
 
 searchPlace("Ghent");
-displayForecast();
