@@ -7,10 +7,10 @@ body {
 }
 main {
   background-color: white;
-  width: 620px;
+  width: 600px;
   margin: 26px auto 0px;
   border-radius: 10px;
-  padding: 28px;
+  padding: 26px;
 }
 /* -------------------section form search input */
 form {
@@ -43,7 +43,7 @@ form {
 /* -----------------section weather display */
 
 .weather-section {
-  margin: 14px 20px 0px;
+  margin: 14px 22px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +69,7 @@ form {
 }
 
 .main-icon {
-  width: 120px;
+  width: 140px;
   margin-left: 10px;
 }
 
@@ -100,7 +100,7 @@ h1 {
 /* -------------------divison week weather */
 
 .week-weather-div {
-  width: 34%;
+  width: 25%;
 }
 .week-weather-div ul {
   list-style: none;
@@ -108,11 +108,10 @@ h1 {
   padding: 0;
 }
 .forecast-week-day {
-  margin-left: 20px;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 6px 0px;
 }
 
 .forecast-week-day h3 {
@@ -122,11 +121,9 @@ h1 {
   padding-bottom: 5px;
 }
 .week-icon {
-  width: 55px;
+  width: 60px;
 }
-.span-weekdays {
-  margin-left: 18px;
-}
+
 .span-weekdays p {
   font-family: "Hind Siliguri", sans-serif;
   margin: 0;

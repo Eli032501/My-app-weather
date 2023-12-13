@@ -93,11 +93,12 @@ function displayForecast(response) {
   //let days = ["Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday"];
   let forecastHTML = "";
 
-  response.data.daily.forEach(function (day) {
-    //forecastHTML += OR forecastHTML = forecastHTML + ...
-    forecastHTML =
-      forecastHTML +
-      ` <li class="forecast-week-day">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      //forecastHTML += OR forecastHTML = forecastHTML + ...
+      forecastHTML =
+        forecastHTML +
+        ` <li class="forecast-week-day">
       <img src="${day.condition.icon_url}" class="week-icon"/>
       <span class="span-weekdays">
       <h3>Tuesday</h3>
@@ -108,6 +109,7 @@ function displayForecast(response) {
       </p>
       </span>
       </li>`;
+    }
   });
 
   let forecastList = document.querySelector("#forecast-week-list");
