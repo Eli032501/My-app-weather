@@ -94,7 +94,12 @@ function formatDay(timestamp) {
     "Saturday",
   ];
 
-  return days[date.getDay()];
+  let nextDay = date.getDay() + 1;
+  if (date.getDay() === 6) {
+    nextDay = 0;
+  }
+
+  return days[nextDay];
 }
 
 function getForecast(place) {
