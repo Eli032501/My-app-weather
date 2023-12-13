@@ -17,15 +17,15 @@ function updateDataWeather(response) {
 
   // extra values - sky, humidity, wind
   let skyElement = document.querySelector("#sky");
-  let skyResponse = response.data.condition.description;
-  skyElement.innerHTML =
-    skyResponse.charAt(0).toUpperCase() + skyResponse.slice(1);
+  skyElement.innerHTML = response.data.condition.description;
+
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.temperature.humidity + "%";
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
 
   getForecast(response.data.city);
+  console.log(response.data);
 }
 
 function formatDate(date) {
@@ -82,7 +82,7 @@ function displayPlaceSubmit(event) {
   searchPlace(searchInput.value);
 }
 
-function formatDay(timestamp) {
+function formatNextDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = [
     "Sunday",
@@ -94,12 +94,7 @@ function formatDay(timestamp) {
     "Saturday",
   ];
 
-  let nextDay = date.getDay() + 1;
-  if (date.getDay() === 6) {
-    nextDay = 0;
-  }
-
-  return days[nextDay];
+  return days[date.getDay()];
 }
 
 function getForecast(place) {
@@ -109,18 +104,17 @@ function getForecast(place) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
   let forecastHTML = "";
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
-      //forecastHTML += OR forecastHTML = forecastHTML + ...
+    // Forecast of the 5 days ahead (without today)
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         ` <li class="forecast-week-day">
       <img src="${day.condition.icon_url}" class="week-icon"/>
       <span class="span-weekdays">
-      <h3>${formatDay(day.time)}</h3>
+      <h3>${formatNextDay(day.time)}</h3>
       <p>${Math.round(day.temperature.maximum)}ºc 
       <span class="value-min">
       ${Math.round(day.temperature.minimum)}ºC
@@ -129,10 +123,19 @@ function displayForecast(response) {
       </span>
       </li>`;
     }
+    console.log(day);
   });
 
   let forecastList = document.querySelector("#forecast-week-list");
   forecastList.innerHTML = forecastHTML;
+
+  // Today Maximum and minimum temperatures values
+  let tempMaxThisDay = document.querySelector("#temp_max_value");
+  tempMaxThisDay.innerHTML =
+    Math.round(response.data.daily[0].temperature.maximum) + " ºC";
+  let tempMinThisDay = document.querySelector("#temp_min_value");
+  tempMinThisDay.innerHTML =
+    Math.round(response.data.daily[0].temperature.minimum) + " ºC";
 }
 
 let searchForm = document.querySelector("#form_search");

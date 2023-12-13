@@ -76,23 +76,23 @@ form {
 h1 {
   font-size: 3.4em;
   margin: 0px;
-  padding-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .div-city-date p {
   color: #474747;
-  font-size: 1.2em;
-  font-weight: 400;
-  margin-bottom: 0px;
-  font-family: "Hind Siliguri", sans-serif;
-}
-
-.value-paramenter {
-  color: #474747;
-  font-family: "Hind Siliguri", sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  margin: 0px;
+  font-family: "Hind Siliguri", sans-serif;
 }
-.value-hum-wind {
+p.date-hours {
+  font-weight: 500;
+  color: #282828;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.values-style {
+  font-size: 16px;
   color: rgb(90, 19, 156);
   font-weight: 400;
   padding-right: 6px;
@@ -111,14 +111,14 @@ h1 {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 6px 0px;
+  padding: 5px 0px;
 }
 
 .forecast-week-day h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 600;
   margin: 0;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 .week-icon {
   width: 60px;
