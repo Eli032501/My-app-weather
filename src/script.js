@@ -25,7 +25,7 @@ function updateDataWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed) + " km/h";
 
   getForecast(response.data.city);
-  console.log(response.data);
+  //console.log(response.data);
 }
 
 function formatDate(date) {
@@ -104,10 +104,18 @@ function getForecast(place) {
 }
 
 function displayForecast(response) {
+  // Today Maximum and minimum temperatures values
+  let tempMaxThisDay = document.querySelector("#temp_max_value");
+  tempMaxThisDay.innerHTML =
+    Math.round(response.data.daily[0].temperature.maximum) + " ºC";
+  let tempMinThisDay = document.querySelector("#temp_min_value");
+  tempMinThisDay.innerHTML =
+    Math.round(response.data.daily[0].temperature.minimum) + " ºC";
+
+  // Forecast of the 5 days ahead (without today)
   let forecastHTML = "";
 
   response.data.daily.forEach(function (day, index) {
-    // Forecast of the 5 days ahead (without today)
     if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
@@ -123,19 +131,11 @@ function displayForecast(response) {
       </span>
       </li>`;
     }
-    console.log(day);
+    //console.log(day);
   });
 
   let forecastList = document.querySelector("#forecast-week-list");
   forecastList.innerHTML = forecastHTML;
-
-  // Today Maximum and minimum temperatures values
-  let tempMaxThisDay = document.querySelector("#temp_max_value");
-  tempMaxThisDay.innerHTML =
-    Math.round(response.data.daily[0].temperature.maximum) + " ºC";
-  let tempMinThisDay = document.querySelector("#temp_min_value");
-  tempMinThisDay.innerHTML =
-    Math.round(response.data.daily[0].temperature.minimum) + " ºC";
 }
 
 let searchForm = document.querySelector("#form_search");

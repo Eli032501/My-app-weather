@@ -1,5 +1,10 @@
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(186, 190, 245) 0%,
+    rgb(192, 192, 245) 33.1%,
+    rgb(218, 203, 246) 90%
+  );
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-size: 14px;
@@ -146,5 +151,5 @@ footer {
 }
 
 footer a {
-  color: rgb(135, 88, 176);
+  color: rgb(90, 19, 156);
 }
