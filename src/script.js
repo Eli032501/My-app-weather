@@ -90,18 +90,22 @@ function getForecast(place) {
 
 function displayForecast(response) {
   console.log(response.data);
-  let days = ["Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday"];
+  //let days = ["Tuesday", "Wednesday", "Thursaday", "Friday", "Saturday"];
   let forecastHTML = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     //forecastHTML += OR forecastHTML = forecastHTML + ...
     forecastHTML =
       forecastHTML +
       ` <li class="forecast-week-day">
       <span class="material-symbols-outlined week-icon"> sunny </span>
       <span class="span-weekdays">
-      <h3>${day}</h3>
-      <p>22ºc <span class="value-min">17ºC</span></p>
+      <h3>Tue</h3>
+      <p>${Math.round(day.temperature.maximum)}ºc 
+      <span class="value-min">
+      ${Math.round(day.temperature.minimum)}ºC
+      </span>
+      </p>
       </span>
       </li>`;
   });
