@@ -86,15 +86,16 @@ function displayForecast() {
   let forecastHTML = "";
 
   days.forEach(function (day) {
+    //forecastHTML += OR forecastHTML = forecastHTML + ...
     forecastHTML =
       forecastHTML +
       ` <li class="forecast-week-day">
-    <span class="material-symbols-outlined week-icon"> sunny </span>
-    <span class="span-weekdays">
-    <h3>${day}</h3>
-    <p>22ºc <span class="value-min">17ºC</span></p>
-    </span>
-    </li>`;
+      <span class="material-symbols-outlined week-icon"> sunny </span>
+      <span class="span-weekdays">
+      <h3>${day}</h3>
+      <p>22ºc <span class="value-min">17ºC</span></p>
+      </span>
+      </li>`;
   });
 
   let forecastList = document.querySelector("#forecast-week-list");
