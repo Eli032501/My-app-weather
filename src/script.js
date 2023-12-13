@@ -85,3 +85,13 @@ let searchForm = document.querySelector("#form_search");
 searchForm.addEventListener("submit", displayPlaceSubmit);
 
 searchPlace("Ghent");
+
+let forecastList = document.querySelector("#forecast-week-list");
+forecastList.innerHTML = ` 
+            <li class="forecast-week-day">
+              <span class="material-symbols-outlined week-icon"> sunny </span>
+              <span class="span-weekdays">
+                <h3>Tuesday</h3>
+                <p>22ºc <span class="value-min">17ºC</span></p>
+              </span>
+            </li>`;
